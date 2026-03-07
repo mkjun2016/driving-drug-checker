@@ -1,16 +1,105 @@
-# React + Vite
+# 🚗💊 운전 약물 검색기 (Driving Drug Checker)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+약물 복용 후 운전 가능 여부를 확인할 수 있는 웹 애플리케이션입니다.
 
-Currently, two official plugins are available:
+## 📋 프로젝트 소개
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+이 애플리케이션은 의약품 복용 후 운전에 미치는 영향을 확인하고, 안전한 운전을 위한 정보를 제공합니다. 약물명, 제조사, 성분명 등으로 검색하여 해당 약물의 운전 위험도를 빠르게 확인할 수 있습니다.
 
-## React Compiler
+### 위험도 분류
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔴 **운전금지**: 복용 후 절대 운전 금지 (5년 이하 징역 / 2천만원 이하 벌금)
+- 🟠 **운전위험**: 복용 후 4-6시간 운전 금지 (사고 시 가중처벌)
+- 🟡 **운전주의**: 졸음/어지럼 시 운전 자제 (증상 발현 시 처벌 대상)
+- 🔵 **단순주의**: 일반적으로 안전, 개인차 주의 (증상 발현 시 처벌 대상)
 
-## Expanding the ESLint configuration
+## ✨ 주요 기능
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 **실시간 검색**: 약물명, 제조사, 성분명으로 검색
+- 🏷️ **필터링**: 위험도 레벨별 필터링
+- 📊 **상세 정보**: 각 약물의 성분, 제조사, 카테고리 정보 제공
+- 📱 **반응형 디자인**: 모바일/태블릿/데스크톱 지원
+- 💾 **CSV 데이터**: 쉽게 업데이트 가능한 데이터 구조
+
+## 🛠️ 기술 스택
+
+- **Frontend**: React 19.2
+- **Build Tool**: Vite 7.3
+- **Styling**: Tailwind CSS 3.4
+- **Icons**: Lucide React
+- **Language**: JavaScript (ESNext)
+
+## 🚀 시작하기
+
+### 필수 요구사항
+
+- Node.js 18.0 이상
+- npm 또는 yarn
+
+### 설치 및 실행
+
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+
+# 프로덕션 빌드
+npm run build
+
+# 빌드 결과 미리보기
+npm run preview
+```
+
+개발 서버는 기본적으로 `http://localhost:5173`에서 실행됩니다.
+
+## 📁 프로젝트 구조
+
+```
+driving-drug-checker/
+├── public/
+│   └── drugs.csv          # 약물 데이터베이스
+├── src/
+│   ├── App.jsx           # 메인 애플리케이션 컴포넌트
+│   ├── main.jsx          # 애플리케이션 진입점
+│   └── index.css         # 전역 스타일
+├── index.html
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+```
+
+## 📊 데이터 구조
+
+`public/drugs.csv` 파일은 다음과 같은 구조를 가집니다:
+
+```csv
+약물명,제조사,제형,위험도,성분명,카테고리
+```
+
+### 예시
+
+```csv
+타이레놀,한국얀센,정제,단순주의,아세트아미노펜,해열진통제
+```
+
+## 🔄 데이터 업데이트
+
+약물 데이터를 추가하거나 수정하려면 `public/drugs.csv` 파일을 편집하세요. CSV 형식을 유지해야 하며, 애플리케이션을 새로고침하면 변경사항이 반영됩니다.
+
+## ⚠️ 법적 고지
+
+본 애플리케이션은 참고 목적으로만 제공됩니다. 약물 복용 후 운전 가능 여부는 반드시 의사 또는 약사와 상담하시기 바랍니다. 본 정보의 사용으로 발생하는 어떠한 손해에 대해서도 책임지지 않습니다.
+
+## 📝 라이선스
+
+MIT License
+
+## 👨‍💻 개발자
+
+mkjun2016
+
+---
+
+**Made with ❤️ for safe driving**
