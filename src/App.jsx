@@ -352,7 +352,7 @@ export default function App() {
           <p className="pt-2">
             데이터 출처: 건강보험심사평가원, 대한약사회, 식품의약품안전처
           </p>
-          <p>마지막 업데이트: 2025.10.31</p>
+          <p>마지막 업데이트: 2025.10.31 / 개발자: 전문규</p>
         </footer>
       </main>
     </div>
