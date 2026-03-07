@@ -238,6 +238,34 @@ export default function App() {
             ))}
             
             <div className="border-t border-slate-600 pt-4 mt-4">
+              <h4 className="font-bold text-white mb-3">⚖️ 법적 기준 안내</h4>
+              <div className="space-y-3 mb-4">
+                <div className="bg-slate-700/50 rounded-lg p-3">
+                  <div className="flex items-start gap-2">
+                    <span className="text-xl">✓</span>
+                    <div>
+                      <p className="font-semibold text-green-400 mb-1">처벌 기준?</p>
+                      <p className="text-sm text-slate-300">
+                        단순 처방 약물 복용이 아닌 <span className="font-bold text-white">핸들, 제동장치를 제대로 조작하지 못하는 등 정상 운전이 불가능한 상태</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-slate-700/50 rounded-lg p-3">
+                  <div className="flex items-start gap-2">
+                    <span className="text-xl">✓</span>
+                    <div>
+                      <p className="font-semibold text-blue-400 mb-1">처벌되는 약물?</p>
+                      <p className="text-sm text-slate-300">
+                        모든 감기약이 아닌, <span className="font-bold text-white">환자 상태에 따라 최면진정제 등 항정신성의약품을 처방받는 경우</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-slate-600 pt-4 mt-4">
               <h4 className="font-bold text-white mb-2">📚 데이터 출처</h4>
               <ul className="text-sm text-slate-400 space-y-1">
                 <li>• 건강보험심사평가원 약가마스터 (2025.10.31 기준)</li>
