@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://driving-drug-checker.pages.dev/sitemap.xml
